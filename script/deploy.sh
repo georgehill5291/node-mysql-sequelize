@@ -1,5 +1,5 @@
 echo "Jump to app folder"
-cd ~/node-mysql-sequelize/
+cd node-mysql-sequelize/
 
 echo "Update app from Git"
 git pull
