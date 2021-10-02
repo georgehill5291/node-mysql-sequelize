@@ -8,11 +8,15 @@ redisearch(redis)
 
 const indexNameTutorial = 'idx:tutorial'
 
-const redisClient = redis.createClient({
-    host: process.env.REDIS_HOST,
-    port: process.env.REDIS_POST,
-    password: process.env.REDIS_PASSWORD,
-})
+const redisClient = redis
+    .createClient({
+        host: process.env.REDIS_HOST,
+        port: process.env.REDIS_PORT,
+        password: process.env.REDIS_PASSWORD,
+    })
+    .on('connect', () => {
+        console.log(`Connected to Redis on port ${process.env.REDIS_HOST}.`)
+    })
 
 // Create and Save a new Tutorial
 exports.create = async (req, res) => {

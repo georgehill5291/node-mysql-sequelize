@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+    node-mysql-sequelize-redis-image:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: node-mysql-sequelize-redis-container
+        ports:
+            - '4004:4004'
