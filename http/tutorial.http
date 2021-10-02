@@ -1,0 +1,36 @@
+GET  http://localhost:4000/api/tutorials?title=
+
+###
+
+GET  http://localhost:4000/api/tutorials/1
+
+
+###
+
+POST http://localhost:4000/api/tutorials
+Content-Type: application/json
+
+{
+    "title": "MYSQL 6",
+    "description": "MYSQL description 6",
+    "published": true
+}
+
+###
+POST http://localhost:4000/api/tutorials/reindex
+
+
+###
+
+PUT http://localhost:4000/api/tutorials/1
+Content-Type: application/json
+
+{    
+    "title": "MYSQL v3",
+    "description": "MYSQL description v3",
+    "published": false
+}
+
+###
+DELETE http://localhost:4000/api/tutorials/2
+
